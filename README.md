@@ -1,0 +1,2 @@
+Minigames:
+  Blackjack
