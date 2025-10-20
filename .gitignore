@@ -1,1 +1,4 @@
 __pycache__
+dist
+gamble.spec
+build
