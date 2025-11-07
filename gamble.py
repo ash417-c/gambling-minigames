@@ -6,6 +6,7 @@ future:
 baccarat
 hitman?
 ''' 
+import sys
 import os
 from deck import BlackJack
 import pygame    
@@ -60,7 +61,10 @@ class AnimatedCard:
         surface.blit(img_scaled, (self.x+((img.get_width() - new_width) // 2),self.y))
 
 def pygame_manager(blackjack:BlackJack):
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    if hasattr(sys, '_MEIPASS'):
+        BASE_DIR = sys._MEIPASS
+    else:
+        BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     cards_path = os.path.join(BASE_DIR, "cards")
     other_path = os.path.join(BASE_DIR, "assets")
 
@@ -96,7 +100,7 @@ def pygame_manager(blackjack:BlackJack):
     
     #important points
     STAND_COORDS = (display_width//3, display_height//2)
-    HIT_COORDS = ((display_width*2)//3, display_height//2)
+    HIT_COORDS = (display_width, display_height//2)
     RESET_COORDS = (0,0)
 
     #coords for player cards
