@@ -1,4 +1,4 @@
 # Blackjack Minigame
 
-Click NEW HAND(top left corner) to deal a new hand.
+Click NEW HAND(top left corner) to deal a new hand. \n
 Click either STAND or HIT to play!
